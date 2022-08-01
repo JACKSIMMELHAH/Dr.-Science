@@ -1,4 +1,11 @@
 @font-face {
     font-family: Typewriter;
     src: url('fonts/MonospaceTypewriter.ttf');
-  }
+}
+
+.container {
+    color: black;
+    font-size: large;
+    font: 19px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, ;
+    font-family: Typewriter;
+}
