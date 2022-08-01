@@ -3,8 +3,12 @@
     src: url('fonts/MonospaceTypewriter.ttf');
 }
 
+body {
+    background-color: rgb(29, 29, 29);
+}
+
 .container {
-    color: black;
+    color:rgb(99, 99, 99);
     font-size: large;
     font: 19px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, ;
     font-family: Typewriter;
