@@ -8,8 +8,42 @@ body {
 }
 
 .container {
-    color:rgb(99, 99, 99);
+    color: rgb(99, 99, 99);
     font-size: large;
     font: 19px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, ;
     font-family: Typewriter;
+}
+
+#areas {
+    color: rgb(183, 183, 183);
+    font: inherit;
+    font-weight: bold;
+    background-color: rgb(29, 29, 29);
+    border: solid 3px rgb(60, 93, 68);
+    position: absolute;
+    height: 6%;
+    width: 8%;
+    top: 20%;
+    left: 20%;
+    transition-duration: 0.4s;
+}
+#areas:hover{
+    background-color: rgb(60, 93, 68);
+}
+
+#resources {
+    color: rgb(183, 183, 183);
+    font: inherit;
+    font-weight: bold;
+    background-color: rgb(29, 29, 29);
+    border: solid 3px rgb(60, 93, 68);
+    position: absolute;
+    height: 6%;
+    width: 8%;
+    top: 20%;
+    left: 31%;
+    transition-duration: 0.4s;
+}
+#resources:hover{
+    background-color: rgb(60, 93, 68);
 }
