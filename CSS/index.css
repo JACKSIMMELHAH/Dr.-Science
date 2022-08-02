@@ -5,8 +5,13 @@
 
 @keyframes fadeOut {
 
-    0% {background-color:rgb(60, 93, 68)}
-    100% {background-color:rgb(29, 29, 29)}
+    0% {
+        background-color: rgb(60, 93, 68)
+    }
+
+    100% {
+        background-color: rgb(29, 29, 29)
+    }
 
 }
 
@@ -49,9 +54,8 @@ body {
 }
 
 .mainTab:focus {
-    animation: fadeOut 1.5s 1;
+    animation: fadeOut 0.3s 1;
 }
-
 
 #areas {
     position: absolute;
@@ -62,11 +66,6 @@ body {
     transition-duration: 0.4s;
 }
 
-
-/*#areas:hover {
-    background-color: rgb(60, 93, 68);
-}
-*/
 #resources {
     position: absolute;
     height: 6%;
@@ -75,8 +74,20 @@ body {
     left: 31%;
     transition-duration: 0.4s;
 }
-/*
-#resources:hover {
-    background-color: rgb(60, 93, 68);
+
+.vl {
+    border-left: 4px solid rgb(99, 99, 99);
+    height: 50px;
 }
-*/
+
+#areavl {
+    position: absolute;
+    top: 27%;
+    left: 24%;
+}
+
+#resourcevl {
+    position: absolute;
+    top: 27%;
+    left: 35%;
+}
