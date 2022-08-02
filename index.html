@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Science</title>
     <script defer src="JAVASCRIPT\index.js"></script>
+    <script defer src="JAVASCRIPT\player.js"></script>
+    <script defer src="JAVASCRIPT\btns.js"></script>
     <link rel="stylesheet" href="CSS\index.css">
 </head>
 
@@ -14,13 +16,38 @@
 
     <div class="container">
 
-        <h1>jk theres no game yet</h1>
+        <ul class="mainTabs">
+            
+            <button data-tab-target="#area" class="active mainTab" id="areas">Areas</button>
+            <button data-tab-target="#resource" class="mainTab" id="resources">Resources</button>
 
-        <d>
-            <button id="areas">Areas</button>
-            <button id="resources">Resources</button>
-        </d>
+        </ul>
 
+        <div class="tab-content">
+            <div id="area" data-tab-content>
+                <h1>wtf there are no areas</h1>
+            </div>
+        
+            <div id="resource" data-tab-content>
+                <h1>wtf there are no resources</h1>
+            </div>
+        </div>
+        
+<!--
+        <div>
+            <button id="areastabbtn" class="mainTabs"
+                style="visibility: visible;">Areas</button>
+            <button id="resourcestabbtn" class="mainTabs"
+                style="visibility: visible;">Resources</button>
+
+            <div id="area" class="subTabs" style>
+                <p id="test">test</p>
+            </div>
+            <div id="resource" class="subTabs" style>
+                <p>test</p>
+            </div>
+        </div>
+    -->
 
     </div>
 

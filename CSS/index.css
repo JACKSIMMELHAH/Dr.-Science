@@ -3,6 +3,12 @@
     src: url('fonts/MonospaceTypewriter.ttf');
 }
 
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: rgb(29, 29, 29);
 }
@@ -14,12 +20,28 @@ body {
     font-family: Typewriter;
 }
 
-#areas {
-    color: rgb(183, 183, 183);
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.mainTab {
+    background-color: rgb(29, 29, 29);
+    border-radius: 8px;
+    border: 3px solid rgb(60, 93, 68);
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
     font: inherit;
     font-weight: bold;
-    background-color: rgb(29, 29, 29);
-    border: solid 3px rgb(60, 93, 68);
+    font-size: 20px;
+    text-align: center;
+}
+
+#areas {
     position: absolute;
     height: 6%;
     width: 8%;
@@ -27,16 +49,13 @@ body {
     left: 20%;
     transition-duration: 0.4s;
 }
-#areas:hover{
+
+
+#areas:hover {
     background-color: rgb(60, 93, 68);
 }
 
 #resources {
-    color: rgb(183, 183, 183);
-    font: inherit;
-    font-weight: bold;
-    background-color: rgb(29, 29, 29);
-    border: solid 3px rgb(60, 93, 68);
     position: absolute;
     height: 6%;
     width: 8%;
@@ -44,6 +63,9 @@ body {
     left: 31%;
     transition-duration: 0.4s;
 }
-#resources:hover{
+
+#resources:hover {
     background-color: rgb(60, 93, 68);
 }
+
+
