@@ -13,7 +13,6 @@ tabs.forEach(tab => {
         tab.classList.add('active')
         target.classList.add('active')
 
-        
     })
 })
 
