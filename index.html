@@ -9,7 +9,9 @@
     <script defer src="JAVASCRIPT\index.js"></script>
     <script defer src="JAVASCRIPT\player.js"></script>
     <script defer src="JAVASCRIPT\btns.js"></script>
+    <script defer src="JAVASCRIPT\achievements.js"></script>
     <link rel="stylesheet" href="CSS\index.css">
+    <link rel="stylesheet" href="CSS\achievements.css">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <div class="container">
 
         <ul class="mainTabs">
-            
+
             <button data-tab-target="#area" class="active mainTab" id="areas">Areas</button>
             <button data-tab-target="#resource" class="mainTab" id="resources">Resources</button>
             <button data-tab-target="#achievement" class="mainTab" id="achievements">Achievements</button>
@@ -30,19 +32,26 @@
                 <div class="vl" id="areavl"></div>
 
             </div>
-        
+
             <div id="resource" data-tab-content>
                 <h1>wtf there are no resources</h1>
                 <div class="vl" id="resourcevl"></div>
             </div>
 
             <div id="achievement" data-tab-content>
-                <h1>wtf there are no achievements</h1>
                 <div class="vl" id="achievementvl"></div>
+
+                <div class="achievement" id="achieve" style="display: none;">
+                
+                        <p>wtf...</p>
+
+                </div>
+
             </div>
+
         </div>
-        
-<!--
+
+        <!--
         <div>
             <button id="areastabbtn" class="mainTabs"
                 style="visibility: visible;">Areas</button>

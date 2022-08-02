@@ -1,0 +1,12 @@
+.achievement {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    border: solid 3px rgb(60, 93, 68);
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    color: white;
+}
