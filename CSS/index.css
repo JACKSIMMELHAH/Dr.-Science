@@ -3,6 +3,13 @@
     src: url('fonts/MonospaceTypewriter.ttf');
 }
 
+@keyframes fadeOut {
+
+    0% {background-color:rgb(60, 93, 68)}
+    100% {background-color:rgb(29, 29, 29)}
+
+}
+
 * {
     user-select: none;
     margin: 0;
@@ -41,6 +48,11 @@ body {
     text-align: center;
 }
 
+.mainTab:focus {
+    animation: fadeOut 1.5s 1;
+}
+
+
 #areas {
     position: absolute;
     height: 6%;
@@ -67,5 +79,3 @@ body {
 #resources:hover {
     background-color: rgb(60, 93, 68);
 }
-
-
