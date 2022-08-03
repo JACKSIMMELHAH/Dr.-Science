@@ -40,6 +40,16 @@ body {
     display: block;
 }
 
+#hzLine {
+    border: 2px solid rgb(46, 46, 46);
+    background: rgb(46, 46, 46);
+    position: absolute;
+    height: 0%;
+    width: 90%;
+    top: 30%;
+    margin-left: 4.5%;
+}
+
 .mainTab {
     background-color: rgb(29, 29, 29);
     border-radius: 8px;
@@ -70,7 +80,7 @@ body {
     height: 6%;
     width: 8%;
     top: 20%;
-    left: 30%;   
+    left: 30%;
 }
 
 #achievements {
@@ -78,7 +88,7 @@ body {
     height: 6%;
     width: 8%;
     top: 20%;
-    left: 50%;  
+    left: 50%;
 }
 
 .vl {
@@ -102,4 +112,58 @@ body {
     position: absolute;
     top: 27%;
     left: 54%;
+}
+
+
+.box {
+    color: rgb(29, 29, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    justify-self: center;
+    top: 75%;
+    left: 37%;
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.play {
+    animation: anime 3s cubic-bezier(0.08, 0.08, 0.08, 1) 0.2s 2 alternate;
+}
+
+
+@keyframes anime {
+    0% {
+        color: rgb(29, 29, 29, 0);
+        width: 0px;
+        height: 0px;
+        background: rgb(29, 29, 29);
+        border: 3px solid rgb(99, 99, 99);
+    }
+
+    25% {
+        color: rgb(29, 29, 29, 0);
+        width: 60px;
+        height: 60px;
+        background: rgb(29, 29, 29);
+        border: 3px solid rgb(99, 99, 99);
+    }
+
+    50% {
+        color: rgb(255, 255, 255, 0);
+        width: 60px;
+        height: 120px;
+        background: rgb(29, 29, 29);
+        border: 3px solid rgb(99, 99, 99);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+        width: 480px;
+        height: 120px;
+        background: rgb(29, 29, 29);
+        border: 3px solid rgb(99, 99, 99);
+    }
 }
