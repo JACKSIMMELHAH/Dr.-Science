@@ -6,11 +6,11 @@
 @keyframes fadeOutGreen {
 
     0% {
-        background-color: var(--bg-color)
+        background-color: var(--green)
     }
 
     100% {
-        background-color: var(--green)
+        background-color: var(--bg-color)
     }
 
     
@@ -19,11 +19,11 @@
 @keyframes fadeOutGrey {
 
     0% {
-        background-color: var(--bg-color)
+        background-color: var(--grey)
     }
 
     100% {
-        background-color: var(--grey)
+        background-color: var(--bg-color)
     }
 
 }
@@ -31,11 +31,11 @@
 @keyframes fadeOutRed {
 
     0% {
-        background-color: var(--bg-color)
+        background-color: var(--red)
     }
 
     100% {
-        background-color: var(--red)
+        background-color: var(--bg-color)
     }
 
 }
@@ -43,11 +43,11 @@
 @keyframes fadeOutYellow {
 
     0% {
-        background-color: var(--bg-color)
+        background-color: var(--yellow)
     }
 
     100% {
-        background-color: var(--yellow)
+        background-color: var(--bg-color)
     }
 
 }
@@ -117,7 +117,6 @@ body {
     left: 10%;
 }
 #areas:focus {
-    background-color: var(--green);
     border: 3px solid var(--green);
     animation: fadeOutGreen 0.3s 1;
     
@@ -134,7 +133,6 @@ body {
 }
 
 #resources:focus {
-    background-color: var(--red);
     animation: fadeOutRed 0.3s 1;
 }
 
@@ -148,7 +146,6 @@ body {
 }
 
 #achievements:focus {
-    background-color: var(--yellow);
     animation: fadeOutYellow 0.3s 1;
 }
 
@@ -163,7 +160,6 @@ body {
 }
 
 #normalAch:focus {
-    background-color: var(--lightyellow);
     animation: fadeOutYellow 0.3s 1;
 }
 
@@ -178,7 +174,6 @@ body {
 }
 
 #hiddenAch:focus {
-    background-color: var(--yellow);
     animation: fadeOutYellow 0.3s 1;
 }
 
@@ -192,12 +187,12 @@ body {
 }
 
 #settings:focus {
-    background-color: var(--grey);
     animation: fadeOutGrey 0.3s 1;
 }
 
 
 .box {
+    opacity: 0;
     color: var(--bg-color);
     display: flex;
     justify-content: center;
@@ -236,6 +231,7 @@ body {
     }
 
     50% {
+        opacity: 1;
         border: 6px solid var(--darkgrey);
         color: rgb(255, 255, 255);
         width: 480px;
@@ -244,6 +240,7 @@ body {
     }
 
     100% {
+        opacity: 1;
         border: 6px solid var(--darkgrey);
         color: rgb(255, 255, 255);
         width: 480px;
