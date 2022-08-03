@@ -6,11 +6,11 @@
 @keyframes fadeOutGreen {
 
     0% {
-        background-color: var(--green)
+        background-color: var(--bg-color)
     }
 
     100% {
-        background-color: var(--bg-color)
+        background-color: var(--green)
     }
 
     
@@ -19,11 +19,11 @@
 @keyframes fadeOutGrey {
 
     0% {
-        background-color: var(--grey)
+        background-color: var(--bg-color)
     }
 
     100% {
-        background-color: var(--bg-color)
+        background-color: var(--grey)
     }
 
 }
@@ -31,11 +31,11 @@
 @keyframes fadeOutRed {
 
     0% {
-        background-color: var(--red)
+        background-color: var(--bg-color)
     }
 
     100% {
-        background-color: var(--bg-color)
+        background-color: var(--red)
     }
 
 }
@@ -43,11 +43,11 @@
 @keyframes fadeOutYellow {
 
     0% {
-        background-color: var(--yellow)
+        background-color: var(--bg-color)
     }
 
     100% {
-        background-color: var(--bg-color)
+        background-color: var(--yellow)
     }
 
 }
@@ -122,6 +122,9 @@ body {
     
 }
 
+#areas.active {
+    background-color: var(--green);
+}
 
 #resources {
     border: 3px solid var(--red);
@@ -135,6 +138,9 @@ body {
 #resources:focus {
     animation: fadeOutRed 0.3s 1;
 }
+#resources.active {
+    background-color: var(--red);
+}
 
 #achievements {
     border: 3px solid var(--yellow);
@@ -144,9 +150,11 @@ body {
     top: 20%;
     left: 70%;
 }
-
 #achievements:focus {
     animation: fadeOutYellow 0.3s 1;
+}
+#achievements.active {
+    background-color: var(--yellow);
 }
 
 #normalAch {
@@ -162,6 +170,9 @@ body {
 #normalAch:focus {
     animation: fadeOutYellow 0.3s 1;
 }
+#normalAch.active {
+    background-color: var(--lightyellow);
+}
 
 #hiddenAch {
     background-color: var(--bg-color);
@@ -176,6 +187,9 @@ body {
 #hiddenAch:focus {
     animation: fadeOutYellow 0.3s 1;
 }
+#hiddenAch.active {
+    background-color: var(--lightyellow);
+}
 
 #settings {
     border: 3px solid var(--grey);
@@ -185,11 +199,12 @@ body {
     top: 20%;
     left: 80%;
 }
-
 #settings:focus {
     animation: fadeOutGrey 0.3s 1;
 }
-
+#settings.active {
+    background-color: var(--grey);
+}
 
 .box {
     opacity: 0;
@@ -210,7 +225,6 @@ body {
 .playHidden {
     animation: achNotice 2s cubic-bezier(0.08, 0.08, 0.08, 1) 0s 2 alternate;
 }
-
 
 @keyframes achNotice {
     0% {
