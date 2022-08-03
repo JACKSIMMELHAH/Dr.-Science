@@ -20,61 +20,47 @@
 
         <div id="hzLine"></div>
 
-        <div id="box" class="box">New achievement unlocked</div>
+        <div id="achHiddenNotice" class="box">New hidden achievement <br> unlocked </br></div>
 
-        <ul class="mainTabs">
+        <div class="tab">
+            <button class="tablinks mainTab" id="areas" onclick="openTab(event, 'area')">Areas</button>
+            <button class="tablinks mainTab" id="resources" onclick="openTab(event, 'resource')">Resources</button>
+            <button class="tablinks mainTab" id="achievements"
+                onclick="openTab(event, 'achievement')">Achievements</button>
+            <button class="tablinks mainTab" id="settings" onclick="openTab(event, 'setting')">Settings</button>
+        </div>
 
-            <button data-tab-target="#area" class="active mainTab" id="areas">Areas</button>
-            <button data-tab-target="#resource" class="mainTab" id="resources">Resources</button>
-            <button data-tab-target="#achievement" class="mainTab" id="achievements">Achievements</button>
-            <button data-tab-target="#setting" class="mainTab" id="settings">Settings</button>
+        <div id="area" class="tabcontent">
+            <h1>wtf there are no areas</h1>
+        </div>
 
+        <div id="resource" class="tabcontent">
+            <h1>wtf there are no resources</h1>
+        </div>
 
-        </ul>
-
-        <div class="tab-content">
-            <div id="area" data-tab-content>
-                <h1>wtf there are no areas</h1>
-
+        <div id="achievement" class="tabcontent">
+            <div class="tab">
+                <button class="tablinks mainTab" id="normalAch" onclick="openTab(event, 'normal',true)">Normal
+                    achievements</button>
+                <button class="tablinks mainTab" id="hiddenAch" onclick="openTab(event, 'hidden', true)">Hidden
+                    achievements</button>
             </div>
 
-            <div id="resource" data-tab-content>
-                <h1>wtf there are no resources</h1>
+            <div id="normal" class="tabcontent">
+                <h1>wtf there are no normal achievements</h1>
             </div>
 
-            <div id="achievement" class="ach1" data-tab-content onclick="achNotice()">
-
-                <div id="achieve" style="display: none;">
-
-                    <p class="achievement" id="ach1">???</p>
-
+            <div id="hidden" class="tabcontent">
+                <div id="achieve">
+                    <p class="achievement" id="ach1" onclick="achNotice()">???</p>
                 </div>
-
             </div>
-
-            <div id="setting" data-tab-content>
-                <h1>wtf there are no settings</h1>
-            </div>
-
-            
 
         </div>
 
-        <!--
-        <div>
-            <button id="areastabbtn" class="mainTabs"
-                style="visibility: visible;">Areas</button>
-            <button id="resourcestabbtn" class="mainTabs"
-                style="visibility: visible;">Resources</button>
-
-            <div id="area" class="subTabs" style>
-                <p id="test">test</p>
-            </div>
-            <div id="resource" class="subTabs" style>
-                <p>test</p>
-            </div>
+        <div id="setting" class="tabcontent">
+            <h1>wtf there are no settings</h1>
         </div>
-    -->
 
     </div>
 

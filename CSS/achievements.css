@@ -5,7 +5,7 @@
     height: 50px;
     width: 200px;
     border: solid 3px var(--yellow);
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: var(--bg-color);
     color: white;
 

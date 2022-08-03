@@ -14,6 +14,7 @@
     }
 
 }
+
 @keyframes fadeOutGrey {
 
     0% {
@@ -25,6 +26,7 @@
     }
 
 }
+
 @keyframes fadeOutRed {
 
     0% {
@@ -36,6 +38,7 @@
     }
 
 }
+
 @keyframes fadeOutYellow {
 
     0% {
@@ -47,6 +50,7 @@
     }
 
 }
+
 :root {
     --grey: rgb(99, 99, 99);
     --darkgrey: rgb(70, 70, 70);
@@ -55,6 +59,7 @@
     --red: rgb(133, 93, 68);
     --yellow: rgb(170, 170, 68);
 }
+
 * {
     user-select: none;
     margin: 0;
@@ -72,12 +77,8 @@ body {
     font-family: Typewriter;
 }
 
-[data-tab-content] {
+.tabcontent {
     display: none;
-}
-
-.active[data-tab-content] {
-    display: block;
 }
 
 #hzLine {
@@ -123,7 +124,8 @@ body {
     top: 20%;
     left: 20%;
 }
-#resources:focus{
+
+#resources:focus {
     animation: fadeOutRed 0.3s 1;
 }
 
@@ -135,12 +137,38 @@ body {
     top: 20%;
     left: 70%;
 }
-#achievements:focus{
+
+#achievements:focus {
     animation: fadeOutYellow 0.3s 1;
 }
 
+#normalAch {
+    border: 3px solid var(--yellow);
+    position: absolute;
+    height: 6%;
+    width: 16%;
+    top: 33%;
+    left: 30%;
+}
 
-#settings{
+#normalAch:focus {
+    animation: fadeOutYellow 0.3s 1;
+}
+
+#hiddenAch {
+    border: 3px solid var(--yellow);
+    position: absolute;
+    height: 6%;
+    width: 16%;
+    top: 33%;
+    left: 50%;
+}
+
+#hiddenAch:focus {
+    animation: fadeOutYellow 0.3s 1;
+}
+
+#settings {
     border: 3px solid var(--grey);
     position: absolute;
     height: 6%;
@@ -148,32 +176,9 @@ body {
     top: 20%;
     left: 80%;
 }
-#settings:focus{
+
+#settings:focus {
     animation: fadeOutGrey 0.3s 1;
-}
-
-
-.vl {
-    border-left: 4px solid var(--grey);
-    height: 50px;
-}
-
-#areavl {
-    position: absolute;
-    top: 27%;
-    left: 24%;
-}
-
-#resourcevl {
-    position: absolute;
-    top: 27%;
-    left: 34%;
-}
-
-#achievementvl {
-    position: absolute;
-    top: 27%;
-    left: 54%;
 }
 
 
@@ -192,13 +197,14 @@ body {
     font-size: 20px;
 }
 
-.play {
+.playHidden {
     animation: achNotice 2s cubic-bezier(0.08, 0.08, 0.08, 1) 0s 2 alternate;
 }
 
 
 @keyframes achNotice {
     0% {
+        opacity: 0;
         color: rgb(29, 29, 29, 0);
         width: 0px;
         height: 0px;
@@ -206,6 +212,7 @@ body {
     }
 
     25% {
+        opacity: 1;
         border: 3px solid var(--bg-color);
         color: rgb(255, 255, 255, 0);
         width: 240px;
