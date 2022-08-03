@@ -159,7 +159,7 @@ body {
 
 #normalAch {
     background-color: var(--bg-color);
-    border: 3px solid var(--lightyellow);
+    border: 3px solid var(--yellow);
     position: absolute;
     height: 6%;
     width: 16%;
@@ -171,12 +171,12 @@ body {
     animation: fadeOutYellow 0.3s 1;
 }
 #normalAch.active {
-    background-color: var(--lightyellow);
+    background-color: var(--yellow);
 }
 
 #hiddenAch {
     background-color: var(--bg-color);
-    border: 3px solid var(--lightyellow);
+    border: 3px solid var(--yellow);
     position: absolute;
     height: 6%;
     width: 16%;
@@ -188,7 +188,7 @@ body {
     animation: fadeOutYellow 0.3s 1;
 }
 #hiddenAch.active {
-    background-color: var(--lightyellow);
+    background-color: var(--yellow);
 }
 
 #settings {
