@@ -3,18 +3,57 @@
     src: url('fonts/MonospaceTypewriter.ttf');
 }
 
-@keyframes fadeOut {
+@keyframes fadeOutGreen {
 
     0% {
-        background-color: rgb(60, 93, 68)
+        background-color: var(--green)
     }
 
     100% {
-        background-color: rgb(29, 29, 29)
+        background-color: var(--bg-color)
     }
 
 }
+@keyframes fadeOutGrey {
 
+    0% {
+        background-color: var(--grey)
+    }
+
+    100% {
+        background-color: var(--bg-color)
+    }
+
+}
+@keyframes fadeOutRed {
+
+    0% {
+        background-color: var(--red)
+    }
+
+    100% {
+        background-color: var(--bg-color)
+    }
+
+}
+@keyframes fadeOutYellow {
+
+    0% {
+        background-color: var(--yellow)
+    }
+
+    100% {
+        background-color: var(--bg-color)
+    }
+
+}
+:root {
+    --grey: rgb(99, 99, 99);
+    --green: rgb(60, 93, 68);
+    --bg-color: rgb(29, 29, 29);
+    --red: rgb(133, 93, 68);
+    --yellow: rgb(170, 170, 68);
+}
 * {
     user-select: none;
     margin: 0;
@@ -22,11 +61,11 @@
 }
 
 body {
-    background-color: rgb(29, 29, 29);
+    background-color: var(--bg-color);
 }
 
 .container {
-    color: rgb(99, 99, 99);
+    color: var(--grey);
     font-size: large;
     font: 19px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, ;
     font-family: Typewriter;
@@ -51,9 +90,9 @@ body {
 }
 
 .mainTab {
-    background-color: rgb(29, 29, 29);
+    background-color: var(--bg-color);
     border-radius: 8px;
-    border: 3px solid rgb(60, 93, 68);
+    border: 3px solid var(--green);
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -64,7 +103,7 @@ body {
 }
 
 .mainTab:focus {
-    animation: fadeOut 0.3s 1;
+    animation: fadeOutGreen 0.3s 1;
 }
 
 #areas {
@@ -72,27 +111,49 @@ body {
     height: 6%;
     width: 8%;
     top: 20%;
-    left: 20%;
+    left: 10%;
 }
 
 #resources {
+    border: 3px solid var(--red);
     position: absolute;
     height: 6%;
     width: 8%;
     top: 20%;
-    left: 30%;
+    left: 20%;
+}
+#resources:focus{
+    animation: fadeOutRed 0.3s 1;
 }
 
 #achievements {
+    border: 3px solid var(--yellow);
     position: absolute;
     height: 6%;
     width: 8%;
     top: 20%;
-    left: 50%;
+    left: 70%;
+}
+#achievements:focus{
+    animation: fadeOutYellow 0.3s 1;
 }
 
+
+#settings{
+    border: 3px solid var(--grey);
+    position: absolute;
+    height: 6%;
+    width: 8%;
+    top: 20%;
+    left: 80%;
+}
+#settings:focus{
+    animation: fadeOutGrey 0.3s 1;
+}
+
+
 .vl {
-    border-left: 4px solid rgb(99, 99, 99);
+    border-left: 4px solid var(--grey);
     height: 50px;
 }
 
@@ -116,54 +177,50 @@ body {
 
 
 .box {
-    color: rgb(29, 29, 29);
+    color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     justify-self: center;
-    top: 75%;
-    left: 37%;
+    top: 1%;
+    left: 0.1%;
     border-radius: 20px;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
 }
 
 .play {
-    animation: anime 3s cubic-bezier(0.08, 0.08, 0.08, 1) 0.2s 2 alternate;
+    animation: achNotice 2s cubic-bezier(0.08, 0.08, 0.08, 1) 0s 2 alternate;
 }
 
 
-@keyframes anime {
+@keyframes achNotice {
     0% {
         color: rgb(29, 29, 29, 0);
         width: 0px;
         height: 0px;
-        background: rgb(29, 29, 29);
-        border: 3px solid rgb(99, 99, 99);
+        background: var(--bg-color);
     }
 
     25% {
-        color: rgb(29, 29, 29, 0);
-        width: 60px;
-        height: 60px;
-        background: rgb(29, 29, 29);
-        border: 3px solid rgb(99, 99, 99);
+        color: rgb(255, 255, 255, 0);
+        width: 240px;
+        height: 120px;
+        background: var(--bg-color);
     }
 
     50% {
-        color: rgb(255, 255, 255, 0);
-        width: 60px;
+        color: rgb(255, 255, 255);
+        width: 480px;
         height: 120px;
-        background: rgb(29, 29, 29);
-        border: 3px solid rgb(99, 99, 99);
+        background: var(--bg-color);
     }
 
     100% {
         color: rgb(255, 255, 255);
         width: 480px;
         height: 120px;
-        background: rgb(29, 29, 29);
-        border: 3px solid rgb(99, 99, 99);
+        background: var(--bg-color);
     }
 }

@@ -4,9 +4,9 @@
     top: 50%;
     height: 50px;
     width: 200px;
-    border: solid 3px rgb(60, 93, 68);
+    border: solid 3px var(--yellow);
     border-radius: 4px;
-    background-color: rgb(29, 29, 29);
+    background-color: var(--bg-color);
     color: white;
 
     display: flex;
