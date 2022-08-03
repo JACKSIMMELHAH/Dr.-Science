@@ -49,6 +49,7 @@
 }
 :root {
     --grey: rgb(99, 99, 99);
+    --darkgrey: rgb(70, 70, 70);
     --green: rgb(60, 93, 68);
     --bg-color: rgb(29, 29, 29);
     --red: rgb(133, 93, 68);
@@ -184,10 +185,11 @@ body {
     position: absolute;
     justify-self: center;
     top: 1%;
-    left: 0.1%;
+    left: -3%;
     border-radius: 20px;
     width: 120px;
     height: 120px;
+    font-size: 20px;
 }
 
 .play {
@@ -204,23 +206,26 @@ body {
     }
 
     25% {
+        border: 3px solid var(--bg-color);
         color: rgb(255, 255, 255, 0);
         width: 240px;
-        height: 120px;
+        height: 80px;
         background: var(--bg-color);
     }
 
     50% {
+        border: 6px solid var(--darkgrey);
         color: rgb(255, 255, 255);
         width: 480px;
-        height: 120px;
-        background: var(--bg-color);
+        height: 80px;
+        background: var(--grey);
     }
 
     100% {
+        border: 6px solid var(--darkgrey);
         color: rgb(255, 255, 255);
         width: 480px;
-        height: 120px;
-        background: var(--bg-color);
+        height: 80px;
+        background: var(--grey);
     }
 }
