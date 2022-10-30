@@ -1,68 +1,10 @@
-@font-face {
-    font-family: Typewriter;
-    src: url('fonts/MonospaceTypewriter.ttf');
-}
-
-@keyframes fadeOutGreen {
-
-    0% {
-        background-color: var(--bg-color)
-    }
-
-    100% {
-        background-color: var(--green)
-    }
-
-    
-}
-
-@keyframes fadeOutGrey {
-
-    0% {
-        background-color: var(--bg-color)
-    }
-
-    100% {
-        background-color: var(--grey)
-    }
-
-}
-
-@keyframes fadeOutRed {
-
-    0% {
-        background-color: var(--bg-color)
-    }
-
-    100% {
-        background-color: var(--red)
-    }
-
-}
-
-@keyframes fadeOutYellow {
-
-    0% {
-        background-color: var(--bg-color)
-    }
-
-    100% {
-        background-color: var(--yellow)
-    }
-
-}
-
 :root {
-    --bg-color: rgb(29, 29, 29);
-    --grey: rgb(99, 99, 99);
-    --darkgrey: rgb(70, 70, 70);
-    --lightgrey: rgb(125, 125, 125);
+    --g1: rgb(98, 0, 234);
+    --g2: rgb(236, 64, 122);
     --green: rgb(60, 93, 68);
-    --lightgreen: rgb(70, 113, 68);
     --red: rgb(133, 93, 68);
-    --lightred: rgb(133, 73, 68);
-    --yellow: rgb(170, 170, 68);
-    --lightyellow: rgb(190, 190, 68);
+    --grey: rgb(99, 99, 99);
+    --bg: rgb(19, 19, 19);
 }
 
 * {
@@ -71,194 +13,117 @@
     padding: 0;
 }
 
-body {
-    background-color: var(--bg-color);
-}
-
-.container {
-    color: var(--grey);
-    font-size: large;
-    font: 19px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, ;
+@font-face {
     font-family: Typewriter;
+    src: url('MonospaceTypewriter.ttf');
 }
 
-.tabcontent {
-    display: none;
+body {
+    background: var(--bg);
+    font-size: large;
+    font: 19px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Typewriter;
 }
 
 #hzLine {
     border: 2px solid rgb(46, 46, 46);
+    border-radius: 16px;
     background: rgb(46, 46, 46);
     position: absolute;
     height: 0%;
     width: 90%;
-    top: 30%;
+    top: 25%;
     margin-left: 4.5%;
 }
 
+.active {
+    animation: gradient 10s ease infinite;
+    background-size: 200%;
+    overflow: hidden;
+    margin: 0px;
+    font-size: 100px;
+}
+
 .mainTab {
-    background-color: var(--bg-color);
+    background-color: var(--bg, 0%);
+    border: 0px;
     border-radius: 8px;
-    border: 3px solid var(--green);
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: white;
     font: inherit;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
 }
 
+.tabcontent {
+    display: none;
+}
+
 #areas {
     position: absolute;
     height: 6%;
     width: 8%;
-    top: 20%;
-    left: 10%;
-}
-#areas:focus {
-    border: 3px solid var(--green);
-    animation: fadeOutGreen 0.3s 1;
-    
+    top: 15%;
+    left: 10%;    
 }
 
-#areas.active {
-    background-color: var(--green);
+.areas {
+    position: absolute;
+    animation: dropdown 0.5s ease forwards;
+    color: white;
 }
 
 #resources {
-    border: 3px solid var(--red);
     position: absolute;
     height: 6%;
     width: 8%;
-    top: 20%;
+    top: 15%;
     left: 20%;
 }
 
-#resources:focus {
-    animation: fadeOutRed 0.3s 1;
-}
-#resources.active {
-    background-color: var(--red);
-}
-
-#achievements {
-    border: 3px solid var(--yellow);
+.resources {
     position: absolute;
-    height: 6%;
-    width: 8%;
-    top: 20%;
-    left: 70%;
-}
-#achievements:focus {
-    animation: fadeOutYellow 0.3s 1;
-}
-#achievements.active {
-    background-color: var(--yellow);
-}
-
-#normalAch {
-    background-color: var(--bg-color);
-    border: 3px solid var(--yellow);
-    position: absolute;
-    height: 6%;
-    width: 16%;
-    top: 33%;
-    left: 30%;
-}
-
-#normalAch:focus {
-    animation: fadeOutYellow 0.3s 1;
-}
-#normalAch.active {
-    background-color: var(--yellow);
-}
-
-#hiddenAch {
-    background-color: var(--bg-color);
-    border: 3px solid var(--yellow);
-    position: absolute;
-    height: 6%;
-    width: 16%;
-    top: 33%;
-    left: 50%;
-}
-
-#hiddenAch:focus {
-    animation: fadeOutYellow 0.3s 1;
-}
-#hiddenAch.active {
-    background-color: var(--yellow);
+    animation: dropdown 0.5s ease forwards;
+    color: white;
 }
 
 #settings {
-    border: 3px solid var(--grey);
     position: absolute;
     height: 6%;
     width: 8%;
-    top: 20%;
+    top: 15%;
     left: 80%;
 }
-#settings:focus {
-    animation: fadeOutGrey 0.3s 1;
-}
-#settings.active {
-    background-color: var(--grey);
-}
 
-.box {
-    opacity: 0;
-    color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.settings {
     position: absolute;
-    justify-self: center;
-    top: 1%;
-    left: -3%;
-    border-radius: 20px;
-    width: 120px;
-    height: 120px;
-    font-size: 20px;
+    animation: dropdown 0.5s ease forwards;
+    color: white;
 }
 
-.playHidden {
-    animation: achNotice 2s cubic-bezier(0.08, 0.08, 0.08, 1) 0s 2 alternate;
-}
-
-@keyframes achNotice {
+@keyframes dropdown {
     0% {
         opacity: 0;
-        color: rgb(29, 29, 29, 0);
-        width: 0px;
-        height: 0px;
-        background: var(--bg-color);
+        top: 25%;
+        left: 20%;
     }
-
-    25% {
-        opacity: 1;
-        border: 3px solid var(--bg-color);
-        color: rgb(255, 255, 255, 0);
-        width: 240px;
-        height: 80px;
-        background: var(--bg-color);
-    }
-
-    50% {
-        opacity: 1;
-        border: 6px solid var(--darkgrey);
-        color: rgb(255, 255, 255);
-        width: 480px;
-        height: 80px;
-        background: var(--grey);
-    }
-
     100% {
         opacity: 1;
-        border: 6px solid var(--darkgrey);
-        color: rgb(255, 255, 255);
-        width: 480px;
-        height: 80px;
-        background: var(--grey);
+        top: 50%;
+        left: 20%
+    }
+}
+
+@keyframes gradient {
+	0% {
+		color: var(--g1);
+	}
+	50% {
+		color: var(--g2);
+	}
+    100% {
+        color: var(--g1);
     }
 }
