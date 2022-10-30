@@ -26,22 +26,24 @@ body {
 }
 
 #hzLine {
-    border: 2px solid rgb(46, 46, 46);
     border-radius: 16px;
-    background: rgb(46, 46, 46);
     position: absolute;
-    height: 0%;
+    height: 2px;
     width: 90%;
     top: 25%;
     margin-left: 4.5%;
+    background: linear-gradient(to right, grey 25%, white 60%, grey 75%);
+    background-size: 500% 100%;
+    animation: hzLine 5s linear infinite forwards;
 }
 
 .active {
-    animation: gradient 10s ease infinite;
     background-size: 200%;
     overflow: hidden;
     margin: 0px;
     font-size: 100px;
+    animation: gradient 10s ease infinite forwards !important;
+    background: none !important;
 }
 
 .mainTab {
@@ -66,7 +68,12 @@ body {
     height: 6%;
     width: 8%;
     top: 15%;
-    left: 10%;    
+    left: 10%;
+}
+
+#areas:hover {
+  font-size: 25px;
+  transition: 0.2s;
 }
 
 .areas {
@@ -83,6 +90,11 @@ body {
     left: 20%;
 }
 
+#resources:hover {
+    font-size: 25px;
+    transition: 0.2s;
+  }
+
 .resources {
     position: absolute;
     animation: dropdown 0.5s ease forwards;
@@ -97,6 +109,11 @@ body {
     left: 80%;
 }
 
+#settings:hover {
+    font-size: 25px;
+    transition: 0.2s;
+  }
+
 .settings {
     position: absolute;
     animation: dropdown 0.5s ease forwards;
@@ -109,6 +126,7 @@ body {
         top: 25%;
         left: 20%;
     }
+
     100% {
         opacity: 1;
         top: 50%;
@@ -117,13 +135,25 @@ body {
 }
 
 @keyframes gradient {
-	0% {
-		color: var(--g1);
-	}
-	50% {
-		color: var(--g2);
-	}
+    0% {
+        color: var(--g1);
+    }
+
+    50% {
+        color: var(--g2);
+    }
+
     100% {
         color: var(--g1);
+    }
+}
+
+@keyframes hzLine {
+    0% {
+        background-position: left bottom;
+    }
+
+    100% {
+        background-position: right bottom;
     }
 }
