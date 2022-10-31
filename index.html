@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="CSS\index.css">
 </head>
 
-<body>
+<body id="lightmode">
 
     <div id="hzLine"></div>
     <div class="tab" id="tab">
@@ -34,15 +34,22 @@
     <div id="setting" class="tabcontent">
 
         <button class="settings" onclick="patchnotes()">Patch Notes <br>Click to view</button>
+        <button onclick="lightmode()" class="lightmode">lightmode</button>
         <div id="patchnotes">
-            <h1>
+            <h1 id="patchnotetext">
+                <br>
+                * Version: 0.0.2 *
+                <br>
+                Added Light theme (?WTF NO)
+                <br>
+                <br>
+                <br>
                 * Version: 0.0.1 *
-                <br>
-                <br>
                 <br>
                 Added Patch notes (WTF?)
             </h1>
         </div>
+    
     </div>
 </body>
 

@@ -24,4 +24,7 @@ function patchnotes() {
     document.getElementById("patchnotes").style.display = "block";
   }
 
-
+  function lightmode() {
+    var element = document.getElementById("lightmode");
+    element.classList.toggle("light-mode");
+  }
