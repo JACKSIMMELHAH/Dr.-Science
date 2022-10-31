@@ -3,6 +3,7 @@ function openTab(evt, openTab, subTab) {
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
+        document.getElementById("patchnotes").style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablinks");
 
@@ -19,6 +20,8 @@ function openTab(evt, openTab, subTab) {
 
 }
 
-
+function patchnotes() {
+    document.getElementById("patchnotes").style.display = "block";
+  }
 
 

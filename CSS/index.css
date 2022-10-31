@@ -2,9 +2,15 @@
     --g1: rgb(98, 0, 234);
     --g2: rgb(236, 64, 122);
     --green: rgb(60, 93, 68);
-    --red: rgb(133, 93, 68);
+    --red: rgb(133, 68, 68);
     --grey: rgb(99, 99, 99);
     --bg: rgb(19, 19, 19);
+    --darkgrey: rgb(70, 70, 70);
+    --lightgrey: rgb(125, 125, 125);
+    --lightgreen: rgb(70, 113, 68);
+    --lightred: rgb(133, 96, 68);
+    --yellow: rgb(170, 170, 68);
+    --lightyellow: rgb(190, 190, 68);
 }
 
 * {
@@ -34,7 +40,7 @@ body {
     margin-left: 4.5%;
     background: linear-gradient(to right, grey 25%, white 60%, grey 75%);
     background-size: 500% 100%;
-    animation: hzLine 5s linear infinite forwards;
+    animation: hzLine 5s cubic-bezier(0.3, 0.29, 1, 1)  infinite forwards;
 }
 
 .active {
@@ -42,17 +48,15 @@ body {
     overflow: hidden;
     margin: 0px;
     font-size: 100px;
-    animation: gradient 10s ease infinite forwards !important;
-    background: none !important;
 }
 
 .mainTab {
-    background-color: var(--bg, 0%);
-    border: 0px;
+    background-color: var(--bg);
     border-radius: 8px;
+    border: none;
+    color: white;
     display: inline-block;
     cursor: pointer;
-    color: white;
     font: inherit;
     font-weight: bold;
     font-size: 20px;
@@ -69,6 +73,11 @@ body {
     width: 8%;
     top: 15%;
     left: 10%;
+    border: solid 2px var(--green);
+}
+
+#areas.active {
+    background-color: var(--green);
 }
 
 #areas:hover {
@@ -88,6 +97,11 @@ body {
     width: 8%;
     top: 15%;
     left: 20%;
+    border: solid 2px var(--red);
+}
+
+#resources.active {
+    background-color: var(--red);
 }
 
 #resources:hover {
@@ -107,6 +121,12 @@ body {
     width: 8%;
     top: 15%;
     left: 80%;
+    border: solid 2px var(--grey);
+}
+
+#settings.active {
+    background-color: var(--grey);
+
 }
 
 #settings:hover {
@@ -116,8 +136,27 @@ body {
 
 .settings {
     position: absolute;
-    animation: dropdown 0.5s ease forwards;
+    animation: dropdownsettings 0.5s ease forwards;
     color: white;
+    background: none;
+    border: solid 2px;
+    border-radius: 8px;
+    height: 8%;
+    width: 8%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#patchnotes {
+    position: fixed;
+    height: 75%;
+    width: 50%;
+    left: 25%;
+    top: 10%;
+    background-color: grey;
+    display: none;
+    animation: dropdownpatchnotes 0.5s ease;
+    text-align: center;
 }
 
 @keyframes dropdown {
@@ -131,6 +170,76 @@ body {
         opacity: 1;
         top: 50%;
         left: 20%
+    }
+}
+
+@keyframes dropdownsettings {
+    0% {
+        opacity: 0;
+        top: 20%;
+        left: 25%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 35%;
+        left: 25%
+    }
+}
+
+@keyframes dropdownpatchnotes {
+    0% {
+        opacity: 0;
+        top: -40%;
+        left: 25%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 10%;
+        left: 25%
+    }
+}
+
+@keyframes greengradient {
+    0% {
+        background-color: var(--green);
+    }
+
+    50% {
+        background-color: var(--lightgreen);
+    }
+
+    100% {
+        background-color: var(--green);
+    }
+}
+
+@keyframes redgradient {
+    0% {
+        color: var(--red);
+    }
+
+    50% {
+        color: var(--lightred);
+    }
+
+    100% {
+        color: var(--red);
+    }
+}
+
+@keyframes greygradient {
+    0% {
+        color: grey;
+    }
+
+    50% {
+        color: darkslategrey;
+    }
+
+    100% {
+        color: grey;
     }
 }
 
