@@ -27,4 +27,7 @@ function patchnotes() {
   function lightmode() {
     var element = document.getElementById("lightmode");
     element.classList.toggle("light-mode");
+    if (document.getElementsByTagName('BODY')[0].classList.contains('light-mode') === true) {
+        document.getElementById('lightmodebtn').innerHTML = "Dark mode";
+    } else {document.getElementById('lightmodebtn').innerHTML = "Light mode"};
   }
