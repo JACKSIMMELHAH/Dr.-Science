@@ -36,12 +36,12 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.light-mode :is(#areas, #resources, #settings, .areas, .resources, .settings, .lightmode) {
+.light-mode :is(#areas, #resources, #settings, .areas, .resources, .settings, .lightmode, #mainstat, div.scrolling-limit, div.scrolling) {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
 
-.light-mode :is(#patchnotes){
+.light-mode :is(#patchnotes) {
     border: solid 2px black;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -65,6 +65,26 @@ body {
 
 .light-mode :is(#settings.active) {
     color: white;
+}
+
+.light-mode :is(div.scrolling-limit) {
+    border: solid 1px black;
+}
+
+#mainstat {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    width: 300px;
+    margin-left: -100px;
+    font-size: 18px;
+    color: var(--grey);
+}
+
+#colorgrad {
+    animation: gradient 5s linear infinite;
+    font-size: 28px;
 }
 
 #hzLine {
@@ -219,6 +239,38 @@ body {
     font-size: 32px;
 }
 
+div.scrolling-limit {
+    position: absolute;
+    top: -3%;
+    width: 60%;
+    left: 20%;
+    height: 60px;
+    background-color: var(--bg);
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    border: solid 1px white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+div.scrolling {
+    position: absolute;
+    animation: scroll 20s infinite linear;
+    color: white;
+}
+
+@keyframes scroll {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -950px;
+    }
+}
 
 @keyframes dropdown {
     0% {
