@@ -71,20 +71,36 @@ body {
     border: solid 1px black;
 }
 
-#mainstat {
+.light-mode :is(#rplogo) {
+    filter: invert(0%);
+}
+
+#mainstats {
     color: white;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 5%;
-    width: 300px;
-    margin-left: -100px;
+    width: 50%;
+    margin-left: -25%;
     font-size: 18px;
     color: var(--grey);
+    text-align: center;
 }
 
 #colorgrad {
     animation: gradient 5s linear infinite;
     font-size: 28px;
+    
+}
+
+#rplogo {
+    position: relative;
+    left: -1%;
+    width: 40px;
+    margin-left: 0px;
+    border: solid 2px black;
+    border-radius: 1px;
+    filter: invert(100%);
 }
 
 #hzLine {
@@ -239,7 +255,16 @@ body {
     font-size: 32px;
 }
 
-div.scrolling-limit {
+#news {
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	color: white;
+	position: relative;
+    top: 2%;
+}
+
+#newsticker {
     position: absolute;
     top: -3%;
     width: 60%;
@@ -256,21 +281,6 @@ div.scrolling-limit {
     align-items: flex-end;
 }
 
-div.scrolling {
-    position: absolute;
-    animation: scroll 20s infinite linear;
-    color: white;
-}
-
-@keyframes scroll {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: -950px;
-    }
-}
 
 @keyframes dropdown {
     0% {
