@@ -36,12 +36,12 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.light-mode :is(#areas, #resources, #settings, .areas, .resources, .settings, .lightmode, #mainstat, div.scrolling-limit, div.scrolling) {
+.light-mode :is(#areas, #resources, #settings, .areas, .resources, .settings, .lightmode, #mainstat, #news) {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
 
-.light-mode :is(#patchnotes) {
+.light-mode :is(#patchnotes, #newsticker) {
     border: solid 2px black;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -74,6 +74,12 @@ body {
 .light-mode :is(#rplogo) {
     filter: invert(0%);
 }
+
+.light-mode :is(#hzLine) {
+    filter: invert(100%);
+}
+
+
 
 #mainstats {
     color: white;
