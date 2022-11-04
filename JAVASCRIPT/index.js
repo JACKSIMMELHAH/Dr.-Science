@@ -25,4 +25,18 @@ if(rp <10000) {
     document.getElementById("rp").innerText = rp
 }
 
+function incRP() {
+    rp++
+    document.getElementById("rp").innerText = rp
+    function expo(x, f) {
+        return Number.parseFloat(x).toExponential(f);
+    }
+    if(rp >=10000) {
+        document.getElementById("rp").innerText = expo(rp , 2);
+    }
+    if(rp <10000) {
+        return rp
+    }
+
+}
 

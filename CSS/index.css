@@ -194,9 +194,19 @@ body {
 .areas {
     position: absolute;
     animation: dropdown 0.5s ease forwards;
+    background-color: var(--bg);
     color: white;
+    border: solid 2px var(--darkgrey);
     font-size: 32px;
+    width: 150px;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
 }
+.areas:hover {
+    transform: scale(1.1) perspective(1px);
+    transition: 0.2s;
+}
+
 
 #resources {
     position: absolute;
