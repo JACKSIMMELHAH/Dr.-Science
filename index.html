@@ -8,6 +8,7 @@
     <title>cool title</title>
     <script defer src="JAVASCRIPT\index.js"></script>
     <script defer src="JAVASCRIPT\btns.js"></script>
+    <script defer src="JAVASCRIPT\player.js"></script>
     <link rel="stylesheet" href="CSS\index.css">
 </head>
 
@@ -24,8 +25,9 @@
     </div>
 
     <div id="mainstats">
-        <p><img src="rplogo.png" id="rplogo" title="Research Point"><span id="rp" title="Research Point">0</span></p>
+        <p><img src="rplogo.png" id="rplogo" title="Research Point"><span id="rp" title="Research Point">100</span></p>
     </div>
+
 
     <div id="hzLine"></div>
     <div class="tab" id="tab">
@@ -37,7 +39,7 @@
     </div>
     <div id="area" class="tabcontent">
 
-        <button class="areas" onclick="incRP()">HUH</button>
+        <button class="areas btn" onclick="a1()" id="a1">HUH</button>
 
     </div>
     <div id="resource" class="tabcontent">
@@ -46,7 +48,7 @@
 
     </div>
     <div id="setting" class="tabcontent">
-
+        <button onclick="clearGame()">Clear game</button>
         <button class="settings" onclick="patchnotes()">Patch Notes <br>Click to view</button>
         <button onclick="lightmode()" class="lightmode" id="lightmodebtn">lightmode</button>
         <div id="patchnotes">
